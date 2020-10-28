@@ -1,0 +1,13 @@
+language: java
+
+jdk:
+    -openjdk11
+
+addons:
+    sonarcloud:
+        organization: gabrielequatrana
+        token: 7defca259f6096247cd9a14658e47dcca34c6693
+        
+script:
+    -ant build
+    -sonar-scanner
