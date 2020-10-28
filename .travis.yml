@@ -5,8 +5,8 @@ jdk:
 
 addons:
     sonarcloud:
-        organization: gabrielequatrana
-        token: 7defca259f6096247cd9a14658e47dcca34c6693
+        organization: "gabrielequatrana"
+        token: "b66b5be3b685c0770a2bd3a69bab00ee06e8376e"
         
 script:
     -ant build
