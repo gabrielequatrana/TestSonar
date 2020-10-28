@@ -12,17 +12,16 @@
     <path id="HelloWorld.classpath">
         <pathelement location="bin"/>
     </path>
-    <path id="run.Hello.classpath">
+    <path id="run.Hello (1).classpath">
         <path refid="HelloWorld.classpath"/>
     </path>
-    <path id="run.Hello (1).classpath">
+    <path id="run.Hello.classpath">
         <path refid="HelloWorld.classpath"/>
     </path>
     <target name="init">
         <mkdir dir="bin"/>
         <copy includeemptydirs="false" todir="bin">
             <fileset dir="src">
-                <exclude name="**/*.launch"/>
                 <exclude name="**/*.java"/>
             </fileset>
         </copy>
@@ -54,14 +53,14 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
-    <target name="Hello">
-        <java classname="Hello" failonerror="true" fork="yes">
-            <classpath refid="run.Hello.classpath"/>
-        </java>
-    </target>
     <target name="Hello (1)">
         <java classname="com.hello.Hello" failonerror="true" fork="yes">
             <classpath refid="run.Hello (1).classpath"/>
+        </java>
+    </target>
+    <target name="Hello">
+        <java classname="Hello" failonerror="true" fork="yes">
+            <classpath refid="run.Hello.classpath"/>
         </java>
     </target>
 </project>
